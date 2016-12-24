@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validate form</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+	<form id="mes-form">
+		<p>name: <input type="text" name="name"></p>
+		<p>surname: <input type="text" name="surname"></p>
+		<p>email: <input type="text" name="email"></p>
+		<p>message: <textarea name="message"></textarea></p>
+		<p>phone: <input type="text" name="phone"></p>
+		<button id="send-btn">Push</button>
+	</form>
+	
+
+	<script>
+	$(document).ready(function(){
+		//событие на кнопку
+		$('#send-btn').on('click', sendForm);
+	});
+
+	function sendForm(){
+		//отключаем событие браузера
+		event.preventDefault();
+		$.post(
+			"1.php",
+			$('#mes-form').serialize(),
+			checkSend
+		);
+	}	
+	function checkSend(data){
+		alert(data);
+	}
+	</script>
+	
+</body>
+</html>

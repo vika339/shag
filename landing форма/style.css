@@ -1,0 +1,14 @@
+form{
+  width: 400px;
+  background: lightblue;
+  margin: 10px;
+}
+label{
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+}
+form button{
+  display: block;
+  margin: 20px auto;
+}

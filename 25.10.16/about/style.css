@@ -1,0 +1,47 @@
+* {
+	margin: 0;
+}
+html {
+	font-family: sans-serif;
+	font-size: 14px;
+}
+p {
+	line-height: 180%;
+	margin: 20px 0;
+}
+.wrap {
+	width: 400px;
+	margin: 30px auto;
+}
+label {
+	display: inline-block;
+	width: 150px;
+	padding-right: 20px;
+	text-align: right;
+}
+input[type="submit"] {
+	display: block;
+	margin: 0 auto;
+}
+form {
+	padding: 20px;
+	background: #e2e2e2;
+	border-radius: 5px;
+	width: 400px;	
+}
+input[type="text"] {
+	width: 200px;
+	padding: 3px;
+}
+textarea {
+	padding: 3px;
+	width: 200px;
+	height: 150px;
+}
+#out {
+	width: 400px;
+	padding: 10px;
+}
+#out p {
+	padding: 0 10px;
+}

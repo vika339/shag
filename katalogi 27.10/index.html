@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+<form >
+	<input type="text" name="text">
+	<button id="sozd" >Создать</button>
+	<button id="del">Удалить</button>
+	<p id="results"></p>
+</form>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+        $('#sozd').on('click', f1);
+	   $('#del').on('click', f2);
+	});
+	function f1(){
+		event.preventDefault(); 
+    $.post(
+      "1.php", 
+       {
+       	"name": $('input[name="text"]').eq(0).val(),
+       	"oper": "sozd"
+
+       },
+      ifSuccess 
+    );
+  }
+  function ifSuccess(data){
+    $('#results').html(data);
+  }
+	
+	function f2(){
+		event.preventDefault(); 
+    $.post(
+      "1.php", {
+      "name": $('input[name="text"]').eq(0).val(),
+       	"oper": "del"},
+      Success 
+    );
+  }
+  function Success(data){
+    $('#results').html(data);
+  }
+	
+</script>
+
+</body>
+</html>

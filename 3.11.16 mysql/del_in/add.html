@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+	<form>
+		<p>Name: <input type="text" name="user"></p>
+		<p>Email: <input type="text" name="email"></p>
+		<p>Pass: <input type="password" name="pass"></p>
+		<input type="submit" value = "Push" id="go">
+	</form>
+
+<script>
+	$(document).ready(function(){
+		$('#go').on('click', send)
+	});
+
+	function send(){
+		event.preventDefault();
+		$.post(
+			"insert.php",
+			$('form').serialize(),
+			ifSuccess
+		);
+	}
+
+	function ifSuccess(data){
+		alert(data)
+	}
+</script>
+</body>
+</html>

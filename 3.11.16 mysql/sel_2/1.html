@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+	<p class="out">
+		
+	</p>
+<hr>
+	<form action="">
+		<p>Name:</p>
+		<p>Pass:</p>
+		<p>Email:</p>
+		<button>Save</button>
+	</form>
+<script>
+	$(document).ready(function(){
+		start();
+	});
+
+	function start(){
+		// запрос на сервер
+		$.post(
+			"sel.php",
+			ifSuccess
+		);
+	}
+
+	function ifSuccess(data){
+		console.log(data);
+		$('.out').html(data);
+		$('select').on('change', changeSelect);
+	}
+	function changeSelect(){
+		$.post(
+			"sel2.php",
+			{
+				"id": $('select option:selected').val()
+			},
+			fillInputs
+		);
+	}
+	function fillInputs(data){
+		console.log (JSON.parse(data));
+	}
+</script>
+
+</body>
+</html>

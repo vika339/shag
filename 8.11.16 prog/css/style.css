@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+}
+.wrap {
+    width: 80%;
+    min-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+}
+.header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #bf9245;
+    color: #032f74;
+}
+.logo {
+    width: 100px;
+}
+
+.footer {
+    width: 100%;
+    background: #74572c;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto;
+    color: #fff;
+    margin-top: 40px;
+    border-bottom: 10px solid #654a29;
+
+}
+.site {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.up {
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+.site-info {
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+.main {
+    width: 70%;
+    float: left;
+}
+.sidebar {
+    float: right;
+    width: 28%;
+    margin-top: 20px;
+}
+article {
+    margin: 30px 0;
+    line-height: 150%;
+    font-size: 18px;
+}
+article h1 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px;
+}
+.clearfix {
+    clear: both;
+}
+article p {
+    line-height: 160%;
+    font-size: 18px;
+    text-indent: 30px;
+}
+article img {
+    max-width: 80%;
+    display: block;
+    margin: 30px auto;
+    border: 10px solid #fff;
+    box-shadow: 0 0 10px #c0c0c0;
+}
+.nav-box {
+    width: 19%;
+    margin: 20px 0.5%;
+    height: 200px;
+    position: relative;
+    border: 1px solid #032f74;
+    cursor: pointer;
+    float: left;
+}
+.nav-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #333;
+}
+.nav-box-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    font-family:'Philosopher', sans-serif;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.sidebar-title {
+    text-align: center;
+    padding: 30px 0;
+    color: #333333;
+    font-size: 28px;
+}
+.sidebar-nav ul li {
+    margin: 8px 0;
+}
+.sidebar-nav ul li a{
+    color: #333;
+    text-decoration: none;
+}
+.sidebar-nav {
+    border-bottom: 1px solid #bf9245;
+    padding-bottom: 15px;
+}
